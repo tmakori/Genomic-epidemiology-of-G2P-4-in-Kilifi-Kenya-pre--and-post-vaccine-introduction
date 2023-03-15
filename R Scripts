@@ -1,0 +1,395 @@
+########################################################################################################################
+#VP6
+
+tree<-read.newick('~/path/VP6.nwk')
+all_meta <- read_csv("~/path/VP6.csv")
+
+p <- ggtree(tree, color='grey40', size=0.2) + 
+  theme_tree2()+
+  expand_limits(y = 450)+
+  theme(axis.text.x = element_text(size=0.250,angle=0))
+
+p
+
+
+VP6 <-  p%<+% all_meta+
+  geom_tippoint(aes(subset=(Segment=="VP6"), color=Vaccination_period), size=0.25)+
+  scale_shape_manual(values=c(17, 16, 24, 21, 18))+
+  scale_color_manual(values=c(wes_palette(5, name = "Darjeeling1", type = "discrete"),"black",wes_palette(5, name = "Cavalcanti1", type = "discrete"),terrain.colors(2),"khaki","gray77",rainbow(10)[c(-1,-2,-4)],as.character(wes_palette(4, name = "Royal1", type = "discrete")),as.character(wes_palette(5, name = "Zissou1", type = "discrete")),"pink","gray32","tomato1", color_global))+
+  #scale_fill_manual(values = color_global[c(-3, -5)])+
+  theme_scientific()+
+  labs(y="Number of sequences", x="Genetic distance", tag="VP6")+
+  scale_y_continuous(limits=c(0,450), minor_breaks = seq(0 , 450,50), breaks = seq(0 , 450,100))+
+  theme(axis.title.x = element_text(size = 9),
+        axis.title.y =  element_text(size = 9),
+        axis.text.x = element_text(size = 9),
+        axis.text.y= element_text(size = 9),
+        legend.position = "none",
+        #legend.position = c(0.22, 0.87),
+        legend.key.size = unit(0.2, "cm"),
+        legend.spacing.x = unit(0.2, 'cm'),
+        legend.spacing.y = unit(0.2, 'cm'),
+        legend.text = element_text(size = 9),
+        legend.title =element_text(size = 9),
+        legend.background = element_rect(fill="#FFFFFF", color = NA),
+        #panel.grid = element_line(size=0.0, color="white"),
+        legend.box.background = element_blank())+
+  guides(shape=guide_legend(ncol=1, title = "Sequencing status", title.position = "top", title.theme = element_text(size=9, face="bold"), order=1),
+         color=guide_legend(ncol=1, title = "Vaccination Period", title.position = "top", title.theme = element_text(size=9, face="bold")))
+
+pdf("~/path/VP6.pdf", width = 8.5, height = 11.7)
+print(VP6)
+dev.off()
+VP6
+########################################################################################################################
+#VP1
+
+tree<-read.newick('~/path/VP1_tree.nwk')
+all_meta <- read_csv("~/path/VP1.csv")
+
+p <- ggtree(tree, color='grey40', size=0.2) + 
+  theme_tree2()+
+  expand_limits(y = 450)+
+  theme(axis.text.x = element_text(size=0.250,angle=0))
+
+p
+
+
+VP1 <-  p%<+% all_meta+
+  geom_tippoint(aes(subset=(Segment=="VP1"), color=Vaccination_period), size=0.25)+
+  scale_shape_manual(values=c(17, 16, 24, 21, 18))+
+  scale_color_manual(values=c(wes_palette(5, name = "Darjeeling1", type = "discrete"),"black",wes_palette(5, name = "Cavalcanti1", type = "discrete"),terrain.colors(2),"khaki","gray77",rainbow(10)[c(-1,-2,-4)],as.character(wes_palette(4, name = "Royal1", type = "discrete")),as.character(wes_palette(5, name = "Zissou1", type = "discrete")),"pink","gray32","tomato1", color_global))+
+  #scale_fill_manual(values = color_global[c(-3, -5)])+
+  theme_scientific()+
+  labs(y="Number of sequences", x="Genetic distance", tag="VP1")+
+  scale_y_continuous(limits=c(0,450), minor_breaks = seq(0 , 450,50), breaks = seq(0 , 450,100))+
+  theme(axis.title.x = element_text(size = 9),
+        axis.title.y =  element_text(size = 9),
+        axis.text.x = element_text(size = 9),
+        axis.text.y= element_text(size = 9),
+        legend.position = "none",
+        #legend.position = c(0.22, 0.87),
+        legend.key.size = unit(0.2, "cm"),
+        legend.spacing.x = unit(0.2, 'cm'),
+        legend.spacing.y = unit(0.2, 'cm'),
+        legend.text = element_text(size = 9),
+        legend.title =element_text(size = 9),
+        legend.background = element_rect(fill="#FFFFFF", color = NA),
+        #panel.grid = element_line(size=0.0, color="white"),
+        legend.box.background = element_blank())+
+  guides(shape=guide_legend(ncol=1, title = "Sequencing status", title.position = "top", title.theme = element_text(size=9, face="bold"), order=1),
+         color=guide_legend(ncol=1, title = "Vaccination Period", title.position = "top", title.theme = element_text(size=9, face="bold")))
+
+pdf("~/path/VP1.pdf", width = 8.5, height = 11.7)
+print(VP1)
+dev.off()
+VP1
+########################################################################################################################
+#VP2
+
+tree<-read.newick('~/path/VP2.nwk')
+all_meta <- read_csv("~/path/VP2.csv")
+
+p <- ggtree(tree, color='grey40', size=0.2) + 
+  theme_tree2()+
+  expand_limits(y = 450)+
+  theme(axis.text.x = element_text(size=0.250,angle=0))
+
+p
+
+
+VP2 <-  p%<+% all_meta+
+  geom_tippoint(aes(subset=(Segment=="VP2"), color=Vaccination_period), size=0.25)+
+  scale_shape_manual(values=c(17, 16, 24, 21, 18))+
+  scale_color_manual(values=c(wes_palette(5, name = "Darjeeling1", type = "discrete"),"black",wes_palette(5, name = "Cavalcanti1", type = "discrete"),terrain.colors(2),"khaki","gray77",rainbow(10)[c(-1,-2,-4)],as.character(wes_palette(4, name = "Royal1", type = "discrete")),as.character(wes_palette(5, name = "Zissou1", type = "discrete")),"pink","gray32","tomato1", color_global))+
+  #scale_fill_manual(values = color_global[c(-3, -5)])+
+  theme_scientific()+
+  labs(y="Number of sequences", x="Genetic distance", tag="VP2")+
+  scale_y_continuous(limits=c(0,450), minor_breaks = seq(0 , 450,50), breaks = seq(0 , 450,100))+
+  theme(axis.title.x = element_text(size = 9),
+        axis.title.y =  element_text(size = 9),
+        axis.text.x = element_text(size = 9),
+        axis.text.y= element_text(size = 9),
+        legend.position = "none",
+        #legend.position = c(0.22, 0.87),
+        legend.key.size = unit(0.2, "cm"),
+        legend.spacing.x = unit(0.2, 'cm'),
+        legend.spacing.y = unit(0.2, 'cm'),
+        legend.text = element_text(size = 9),
+        legend.title =element_text(size = 9),
+        legend.background = element_rect(fill="#FFFFFF", color = NA),
+        #panel.grid = element_line(size=0.0, color="white"),
+        legend.box.background = element_blank())+
+  guides(shape=guide_legend(ncol=1, title = "Sequencing status", title.position = "top", title.theme = element_text(size=9, face="bold"), order=1),
+         color=guide_legend(ncol=1, title = "Vaccination Period", title.position = "top", title.theme = element_text(size=9, face="bold")))
+
+pdf("~/path/VP2.pdf", width = 8.5, height = 11.7)
+print(VP2)
+dev.off()
+VP2
+########################################################################################################################
+#VP3
+
+tree<-read.newick('~/path/VP3_tree.nwk')
+all_meta <- read_csv("~/path/VP3.csv")
+
+p <- ggtree(tree, color='grey40', size=0.2) + 
+  theme_tree2()+
+  expand_limits(y = 450)+
+  theme(axis.text.x = element_text(size=0.250,angle=0))
+
+p
+
+
+VP3 <-  p%<+% all_meta+
+  geom_tippoint(aes(subset=(Segment=="VP3"), color=Vaccination_period), size=0.25)+
+  scale_shape_manual(values=c(17, 16, 24, 21, 18))+
+  scale_color_manual(values=c(wes_palette(5, name = "Darjeeling1", type = "discrete"),"black",wes_palette(5, name = "Cavalcanti1", type = "discrete"),terrain.colors(2),"khaki","gray77",rainbow(10)[c(-1,-2,-4)],as.character(wes_palette(4, name = "Royal1", type = "discrete")),as.character(wes_palette(5, name = "Zissou1", type = "discrete")),"pink","gray32","tomato1", color_global))+
+  #scale_fill_manual(values = color_global[c(-3, -5)])+
+  theme_scientific()+
+  labs(y="Number of sequences", x="Genetic distance", tag="VP3")+
+  scale_y_continuous(limits=c(0,450), minor_breaks = seq(0 , 450,50), breaks = seq(0 , 450,100))+
+  theme(axis.title.x = element_text(size = 9),
+        axis.title.y =  element_text(size = 9),
+        axis.text.x = element_text(size = 9),
+        axis.text.y= element_text(size = 9),
+        legend.position = "none",
+        #legend.position = c(0.22, 0.87),
+        legend.key.size = unit(0.2, "cm"),
+        legend.spacing.x = unit(0.2, 'cm'),
+        legend.spacing.y = unit(0.2, 'cm'),
+        legend.text = element_text(size = 9),
+        legend.title =element_text(size = 9),
+        legend.background = element_rect(fill="#FFFFFF", color = NA),
+        #panel.grid = element_line(size=0.0, color="white"),
+        legend.box.background = element_blank())+
+  guides(shape=guide_legend(ncol=1, title = "Sequencing status", title.position = "top", title.theme = element_text(size=9, face="bold"), order=1),
+         color=guide_legend(ncol=1, title = "Vaccination Period", title.position = "top", title.theme = element_text(size=9, face="bold")))
+
+pdf("~/Desktop/G2P4_MSC/Analysis/klf/klf_global/combined/Trees/VP3.pdf", width = 8.5, height = 11.7)
+print(VP3)
+dev.off()
+VP3
+
+########################################################################################################################
+#NSP1
+
+tree<-read.newick('~/path/NSP1.nwk')
+all_meta <- read_csv("~/path/NSP1.csv")
+
+p <- ggtree(tree, color='grey40', size=0.2) + 
+  theme_tree2()+
+  expand_limits(y = 450)+
+  theme(axis.text.x = element_text(size=0.250,angle=0))
+
+p
+
+
+NSP1 <-  p%<+% all_meta+
+  geom_tippoint(aes(subset=(Segment=="NSP1"), color=Vaccination_period), size=0.25)+
+  scale_shape_manual(values=c(17, 16, 24, 21, 18))+
+  scale_color_manual(values=c(wes_palette(5, name = "Darjeeling1", type = "discrete"),"black",wes_palette(5, name = "Cavalcanti1", type = "discrete"),terrain.colors(2),"khaki","gray77",rainbow(10)[c(-1,-2,-4)],as.character(wes_palette(4, name = "Royal1", type = "discrete")),as.character(wes_palette(5, name = "Zissou1", type = "discrete")),"pink","gray32","tomato1", color_global))+
+  #scale_fill_manual(values = color_global[c(-3, -5)])+
+  theme_scientific()+
+  labs(y="Number of sequences", x="Genetic distance", tag="NSP1")+
+  scale_y_continuous(limits=c(0,450), minor_breaks = seq(0 , 450,50), breaks = seq(0 , 450,100))+
+  theme(axis.title.x = element_text(size = 9),
+        axis.title.y =  element_text(size = 9),
+        axis.text.x = element_text(size = 9),
+        axis.text.y= element_text(size = 9),
+        legend.position = "none",
+        #legend.position = c(0.22, 0.87),
+        legend.key.size = unit(0.2, "cm"),
+        legend.spacing.x = unit(0.2, 'cm'),
+        legend.spacing.y = unit(0.2, 'cm'),
+        legend.text = element_text(size = 9),
+        legend.title =element_text(size = 9),
+        legend.background = element_rect(fill="#FFFFFF", color = NA),
+        #panel.grid = element_line(size=0.0, color="white"),
+        legend.box.background = element_blank())+
+  guides(shape=guide_legend(ncol=1, title = "Sequencing status", title.position = "top", title.theme = element_text(size=9, face="bold"), order=1),
+         color=guide_legend(ncol=1, title = "Vaccination Period", title.position = "top", title.theme = element_text(size=9, face="bold")))
+
+pdf("~/path/NSP1.pdf", width = 8.5, height = 11.7)
+print(NSP1)
+dev.off()
+NSP1
+
+########################################################################################################################
+
+tree<-read.newick('~/path/NSP2.nwk')
+all_meta <- read_csv("~/path/NSP2.csv")
+
+p <- ggtree(tree, color='grey40', size=0.2) + 
+  theme_tree2()+
+  expand_limits(y = 450)+
+  theme(axis.text.x = element_text(size=0.250,angle=0))
+
+p
+
+
+NSP2 <-  p%<+% all_meta+
+  geom_tippoint(aes(subset=(Segment=="NSP2"), color=Vaccination_period), size=0.25)+
+  scale_shape_manual(values=c(17, 16, 24, 21, 18))+
+  scale_color_manual(values=c(wes_palette(5, name = "Darjeeling1", type = "discrete"),"black",wes_palette(5, name = "Cavalcanti1", type = "discrete"),terrain.colors(2),"khaki","gray77",rainbow(10)[c(-1,-2,-4)],as.character(wes_palette(4, name = "Royal1", type = "discrete")),as.character(wes_palette(5, name = "Zissou1", type = "discrete")),"pink","gray32","tomato1", color_global))+
+  #scale_fill_manual(values = color_global[c(-3, -5)])+
+  theme_scientific()+
+  labs(y="Number of sequences", x="Genetic distance", tag="NSP2")+
+  scale_y_continuous(limits=c(0,450), minor_breaks = seq(0 , 450,50), breaks = seq(0 , 450,100))+
+  theme(axis.title.x = element_text(size = 9),
+        axis.title.y =  element_text(size = 9),
+        axis.text.x = element_text(size = 9),
+        axis.text.y= element_text(size = 9),
+        legend.position = "none",
+        #legend.position = c(0.22, 0.87),
+        legend.key.size = unit(0.2, "cm"),
+        legend.spacing.x = unit(0.2, 'cm'),
+        legend.spacing.y = unit(0.2, 'cm'),
+        legend.text = element_text(size = 9),
+        legend.title =element_text(size = 9),
+        legend.background = element_rect(fill="#FFFFFF", color = NA),
+        #panel.grid = element_line(size=0.0, color="white"),
+        legend.box.background = element_blank())+
+  guides(shape=guide_legend(ncol=1, title = "Sequencing status", title.position = "top", title.theme = element_text(size=9, face="bold"), order=1),
+         color=guide_legend(ncol=1, title = "Vaccination Period", title.position = "top", title.theme = element_text(size=9, face="bold")))
+
+pdf("~/path/NSP2.pdf", width = 8.5, height = 11.7)
+print(NSP2)
+dev.off()
+NSP2
+
+########################################################################################################################
+#NSP3
+tree<-read.newick('~/path/NSP3.nwk')
+all_meta <- read_csv("~/path/NSP3.csv")
+
+p <- ggtree(tree, color='grey40', size=0.2) + 
+  theme_tree2()+
+  expand_limits(y = 2000)+
+  theme(axis.text.x = element_text(size=0.250,angle=0))
+
+p
+
+
+NSP3 <-  p%<+% all_meta+
+  geom_tippoint(aes(subset=(Segment=="NSP3"), color=Vaccination_period), size=0.25)+
+  scale_shape_manual(values=c(17, 16, 24, 21, 18))+
+  scale_color_manual(values=c(wes_palette(5, name = "Darjeeling1", type = "discrete"),"black",wes_palette(5, name = "Cavalcanti1", type = "discrete"),terrain.colors(2),"khaki","gray77",rainbow(10)[c(-1,-2,-4)],as.character(wes_palette(4, name = "Royal1", type = "discrete")),as.character(wes_palette(5, name = "Zissou1", type = "discrete")),"pink","gray32","tomato1", color_global))+
+  #scale_fill_manual(values = color_global[c(-3, -5)])+
+  theme_scientific()+
+  labs(y="Number of sequences", x="Genetic distance", tag="NSP3")+
+  scale_y_continuous(limits=c(0,450), minor_breaks = seq(0 , 450,50), breaks = seq(0 , 450,100))+
+  theme(axis.title.x = element_text(size = 9),
+        axis.title.y =  element_text(size = 9),
+        axis.text.x = element_text(size = 9),
+        axis.text.y= element_text(size = 9),
+        legend.position = "none",
+        #legend.position = c(0.22, 0.87),
+        legend.key.size = unit(0.2, "cm"),
+        legend.spacing.x = unit(0.2, 'cm'),
+        legend.spacing.y = unit(0.2, 'cm'),
+        legend.text = element_text(size = 9),
+        legend.title =element_text(size = 9),
+        legend.background = element_rect(fill="#FFFFFF", color = NA),
+        #panel.grid = element_line(size=0.0, color="white"),
+        legend.box.background = element_blank())+
+  guides(shape=guide_legend(ncol=1, title = "Sequencing status", title.position = "top", title.theme = element_text(size=9, face="bold"), order=1),
+         color=guide_legend(ncol=1, title = "Vaccination Period", title.position = "top", title.theme = element_text(size=9, face="bold")))
+
+pdf("~/path/NSP3.pdf", width = 8.5, height = 11.7)
+print(NSP3)
+dev.off()
+NSP3
+
+#######################################################################################################################
+#NS4
+
+tree<-read.newick('~/path/NSP4.nwk')
+all_meta <- read_csv("~/path/NSP4.csv")
+
+p <- ggtree(tree, color='grey40', size=0.2) + 
+  theme_tree2()+
+  expand_limits(y = 450)+
+  theme(axis.text.x = element_text(size=0.250,angle=0))
+
+p
+
+
+NSP4 <-  p%<+% all_meta+
+  geom_tippoint(aes(subset=(Segment=="NSP4"), color=Vaccination_period), size=0.25)+
+  scale_shape_manual(values=c(17, 16, 24, 21, 18))+
+  scale_color_manual(values=c(wes_palette(5, name = "Darjeeling1", type = "discrete"),"black",wes_palette(5, name = "Cavalcanti1", type = "discrete"),terrain.colors(2),"khaki","gray77",rainbow(10)[c(-1,-2,-4)],as.character(wes_palette(4, name = "Royal1", type = "discrete")),as.character(wes_palette(5, name = "Zissou1", type = "discrete")),"pink","gray32","tomato1", color_global))+
+  #scale_fill_manual(values = color_global[c(-3, -5)])+
+  theme_scientific()+
+  labs(y="Number of sequences", x="Genetic distance", tag="NSP4")+
+  scale_y_continuous(limits=c(0,450), minor_breaks = seq(0 , 450,50), breaks = seq(0 , 450,100))+
+  theme(axis.title.x = element_text(size = 9),
+        axis.title.y =  element_text(size = 9),
+        axis.text.x = element_text(size = 9),
+        axis.text.y= element_text(size = 9),
+        legend.position = "none",
+        #legend.position = c(0.22, 0.87),
+        legend.key.size = unit(0.2, "cm"),
+        legend.spacing.x = unit(0.2, 'cm'),
+        legend.spacing.y = unit(0.2, 'cm'),
+        legend.text = element_text(size = 9),
+        legend.title =element_text(size = 9),
+        legend.background = element_rect(fill="#FFFFFF", color = NA),
+        #panel.grid = element_line(size=0.0, color="white"),
+        legend.box.background = element_blank())+
+  guides(shape=guide_legend(ncol=1, title = "Sequencing status", title.position = "top", title.theme = element_text(size=9, face="bold"), order=1),
+         color=guide_legend(ncol=1, title = "Vaccination Period", title.position = "top", title.theme = element_text(size=9, face="bold")))
+
+pdf("~/path/NSP4.pdf", width = 8.5, height = 11.7)
+print(NSP4)
+dev.off()
+NSP4
+
+########################################################################################################################
+
+#NSP5
+
+tree<-read.newick('~/path/NSP5.nwk')
+all_meta <- read_csv("~/path/NSP5.csv")
+
+p <- ggtree(tree, color='grey40', size=0.2) + 
+  theme_tree2()+
+  expand_limits(y = 450)+
+  theme(axis.text.x = element_text(size=0.250,angle=0))
+
+p
+
+
+NSP5 <-  p%<+% all_meta+
+  geom_tippoint(aes(subset=(Segment=="NSP5"), color=Vaccination_period), size=0.25)+
+  scale_shape_manual(values=c(17, 16, 24, 21, 18))+
+  scale_color_manual(values=c(wes_palette(5, name = "Darjeeling1", type = "discrete"),"black",wes_palette(5, name = "Cavalcanti1", type = "discrete"),terrain.colors(2),"khaki","gray77",rainbow(10)[c(-1,-2,-4)],as.character(wes_palette(4, name = "Royal1", type = "discrete")),as.character(wes_palette(5, name = "Zissou1", type = "discrete")),"pink","gray32","tomato1", color_global))+
+  #scale_fill_manual(values = color_global[c(-3, -5)])+
+  theme_scientific()+
+  labs(y="Number of sequences", x="Genetic distance", tag="NSP5")+
+  scale_y_continuous(limits=c(0,450), minor_breaks = seq(0 , 450,50), breaks = seq(0 , 450,100))+
+  theme(axis.title.x = element_text(size = 9),
+        axis.title.y =  element_text(size = 9),
+        axis.text.x = element_text(size = 9),
+        axis.text.y= element_text(size = 9),
+        legend.position = "right",
+        #legend.position = c(0.22, 0.87),
+        legend.key.size = unit(0.2, "cm"),
+        legend.spacing.x = unit(0.2, 'cm'),
+        legend.spacing.y = unit(0.2, 'cm'),
+        legend.text = element_text(size = 9),
+        legend.title =element_text(size = 9),
+        legend.background = element_rect(fill="#FFFFFF", color = NA),
+        #panel.grid = element_line(size=0.0, color="white"),
+        legend.box.background = element_blank())+
+  guides(shape=guide_legend(ncol=1, title = "Sequencing status", title.position = "top", title.theme = element_text(size=9, face="bold"), order=1),
+         color=guide_legend(ncol=1, title = "Vaccination Period", title.position = "top", title.theme = element_text(size=9, face="bold")))
+pdf("~/path/NSP5.pdf", width = 8.5, height = 11.7)
+print(NSP5)
+dev.off()
+NSP5
+################################################################################################
+FigS1 <- VP6+ VP1+ VP2+ VP3+ NSP1+ NSP2+ NSP3+ NSP4+ NSP5 + guide_area()+plot_layout(ncol=4,guides = "collect")
+pdf("~/path/Fig.pdf", width = 11.87, height =9.02)
+print(FigS1)
+dev.off()
